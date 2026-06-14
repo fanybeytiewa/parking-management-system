@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane stylesheets="@styles.css" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0"
+            fx:controller="bg.tu_varna.sit.ps.project24621627.AddController">
+    <center>
+        <VBox styleClass="form-pane" spacing="10">
+            <Label text="Номер на паркомясто"/>
+            <TextField fx:id="placeNumber" promptText="Номер на паркомясто"/>
+            <Label text="Етаж на паркомясто"/>
+            <TextField fx:id="placeFloor" promptText="Етаж на паркомясто"/>
+
+            <Label text="Бележки"/>
+            <TextArea fx:id="notes" promptText="Бележки" wrapText="true"
+                      layoutX="14.0" layoutY="40.0" prefHeight="150.0" prefWidth="300.0"/>
+
+            <Label text="Тип място"/>
+            <ComboBox fx:id="placeTypeCombo" maxWidth="Infinity"/>
+
+            <Label text="Достъп"/>
+            <RadioButton fx:id="cardAccessRadio" text="Карта">
+                <toggleGroup>
+                    <ToggleGroup fx:id="accessToggle"/>
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="distanceAccessRadio" text="Дистанционно" toggleGroup="$accessToggle"/>
+            <CheckBox fx:id="busyCheckBox" text="Заето"/>
+        </VBox>
+    </center>
+
+<bottom>
+        <HBox alignment="CENTER">
+            <padding>
+                <Insets top="20" bottom="15" right="15" left="15"/>
+            </padding>
+
+            <Button fx:id="saveButton" text="Запази" onAction="#handleNewParkingSpace"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="cancelButton" text="Отказ" onAction="#handleCancel"/>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane stylesheets="@styles.css" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="300.0" prefWidth="500.0">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20.0" styleClass="form-pane">
+
+            <Label text="Фатменур Бейтиева Ердинчева" styleClass="heading" textAlignment="CENTER" wrapText="true"/>
+            <VBox alignment="CENTER" spacing="8.0">
+                <Label text="Специалност: Софтуерни и интернет технологии (СИТ)" styleClass="label"/>
+                <Label text="Фак. номер: 24621627" styleClass="label"/>
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>
